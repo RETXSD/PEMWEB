@@ -1,0 +1,72 @@
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style body agar konten berada di tengah */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container agar konten lebih terpusat */
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+
+/* Style judul */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style div */
+.div1 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Style tabel */
+table {
+    border-color: #333;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+/* Style header tabel */
+th {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+/* Style sel tabel */
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Style baris tabel */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect */
+tr:hover {
+    background-color: #ddd;
+}
