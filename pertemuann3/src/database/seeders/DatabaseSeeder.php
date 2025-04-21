@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
+        if(user::count() == 0) {
 
         $user = \App\Models\User::factory()->create([
             'name' => 'Admin',
@@ -21,5 +22,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $user->assignRole('super_admin');
-    }
+        }
+        $this->call([
+            FooterSeeder::class,
+            PageConfigSeeder::class,
+            LogoSeeder::class,
+        ]);
+    
+        }
 }

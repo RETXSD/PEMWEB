@@ -173,13 +173,6 @@
   </div>
   <!-- SKILL End -->
 
-  <!-- Footer Start -->
-  <footer>
-    <div class="container text-center">
-      <p class="text-muted mb-0">&copy; 2024</p>
-    </div>
-  </footer>
-  <!-- Footer End -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </main>

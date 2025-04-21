@@ -1,3 +1,12 @@
+@php
+    use App\Models\PageConfig;
+    use App\Models\Logo;
+
+    $logo = logo::first();
+    $config = PageConfig::first();
+@endphp
+
+
 <body>
   <main>
     <!-- Banner Section -->
@@ -17,8 +26,9 @@
           <!-- Kolom Kanan: Tulisan -->
           <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="text-center text-lg-start ps-lg-5">
-              <h1 class="mb-4" style="color: #FFFFFF; font-weight: 700;">anjay ini web gw bro</h1>
-              <p class="mb-4" style="font-size: 18px; color: #FFD700;">Unlocking Potential, Igniting Excellence</p>
+              <h1 class="mb-4" style="color: #FFFFFF; font-weight: 700;">{{ $config->title ?? '' }}</h1>
+              <p class="mb-4" style="font-size: 18px; color: #FFD700;">{{ $config->detail ?? '' }}
+              </p>
               <a type="button"
                 class="btn"
                 href="#"
@@ -38,7 +48,7 @@
               <img 
                 loading="lazy" 
                 decoding="async"
-                src="https://surabaya.proxsisgroup.com/wp-content/uploads/2018/03/web-design.jpg"
+                src="{{ $config->image ? asset('storage/' . $config->image) : asset('front/images/default.png') }}"
                 alt="banner image"
                 class="img-fluid rounded shadow-lg"
                 style="border: 4px solid #FFD700;">
@@ -54,9 +64,68 @@
       <div class="position-absolute top-0 start-0 w-100 h-100" style="pointer-events: none;">
         <!-- Tambahin shape SVG atau gradient efek di sini kalau mau -->
       </div>
+
+      <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="section-title pt-4">
+          <p class="text-primary text-uppercase fw-bold mb-3">Our Services</p>
+          <h1>Our online services</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipreiscing elit. Lacus penatibus tincidunt</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 service-item">
+        <a class="text-black" href="service-details.html">
+          <div class="block"> <span class="colored-box text-center h3 mb-4">01</span>
+            <h3 class="mb-3 service-title">Digital Marketing</h3>
+            <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 service-item">
+        <a class="text-black" href="service-details.html">
+          <div class="block"> <span class="colored-box text-center h3 mb-4">02</span>
+            <h3 class="mb-3 service-title">Web Design</h3>
+            <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 service-item">
+        <a class="text-black" href="service-details.html">
+          <div class="block"> <span class="colored-box text-center h3 mb-4">03</span>
+            <h3 class="mb-3 service-title">SEO</h3>
+            <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 service-item">
+        <a class="text-black" href="service-details.html">
+          <div class="block"> <span class="colored-box text-center h3 mb-4">04</span>
+            <h3 class="mb-3 service-title">Logo Design</h3>
+            <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 service-item">
+        <a class="text-black" href="service-details.html">
+          <div class="block"> <span class="colored-box text-center h3 mb-4">05</span>
+            <h3 class="mb-3 service-title">Graphic Design</h3>
+            <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
     </section>
   </main>
 
+
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
