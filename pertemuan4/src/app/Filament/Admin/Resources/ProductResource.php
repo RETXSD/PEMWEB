@@ -27,11 +27,11 @@ class ProductResource extends Resource
 
     protected static ?string $prurallLabel = 'Product Manager';
     
-    public static function getNavigationSort():?int
+    public static function getNavigationSort(): ?int
     {
-        return crc32(static::getNavigationLabel()) %100;
+            return crc32(static::getNavigationLabel()) %100;
     }
-
+    
     public static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
@@ -77,9 +77,7 @@ class ProductResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
-            ->bulkActions([
-                
-            ]);
+            ->bulkActions([]);
     }
 
     public static function getRelations(): array
@@ -98,17 +96,15 @@ class ProductResource extends Resource
         ];
     }
 
-    public static function CanCreate(): bool{
-        return Product::count() === 0;
+    public static function CanCreate() : bool{
+        return Product::count()===0;
     }
-
+    
     public static function CanDelete(\Illuminate\Database\Eloquent\Model $record): bool{
         return False;
     }
-    public static function CanDeleteany(): bool{
-        return False;
-    }
 
-    
-        
+    public static function CanDeleteAny() : bool{
+        return false;
+    }
 }

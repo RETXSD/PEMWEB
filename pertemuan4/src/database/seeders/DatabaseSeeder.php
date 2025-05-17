@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Seo;
 use App\Models\User;
+use Filament\Pages\Page;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
+
         if(User::count()==0){
             $user = \App\Models\User::factory()->create([
                 'name' => 'Admin',
@@ -26,6 +29,11 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             ProductSeeder::class,
+            PageConfigSeeder::class,
+            SeoSeeder::class,
+            LogoSeeder::class,
+            FooterSeeder::class,
+            
         ]);
     }
 }
