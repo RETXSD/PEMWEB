@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             PageConfigSeeder::class,
             LogoSeeder::class,
+            SaleSeeder::class,
             
 
             

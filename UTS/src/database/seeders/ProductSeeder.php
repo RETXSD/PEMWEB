@@ -13,6 +13,7 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         Product::create([
+            'id' => 1,
             'name' => 'Sample Product',
             'description' => 'This is a sample product description.',
             'image' => '',
