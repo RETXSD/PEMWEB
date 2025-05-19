@@ -53,7 +53,6 @@
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="section-title pt-4">
-            <p class="text-primary text-uppercase fw-bold mb-3">Our Services</p>
             <h1>Data Barang</h1>
           </div>
         </div>
