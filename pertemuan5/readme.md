@@ -22,3 +22,8 @@ Panel baru bernama `jualan` telah dibuat menggunakan perintah:
 ```bash
 php artisan make:filament-panel jualan
 
+---
+tambahkan login() pada app/provider/filament/panelyangdibuatPanelProvider.php
+->id('jualan')
+            ->path('jualan')
+            ->login()
