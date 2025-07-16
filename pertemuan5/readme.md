@@ -25,6 +25,10 @@ php artisan make:filament-panel jualan
 ```
 ---
 tambahkan login() pada app/provider/filament/panelyangdibuatPanelProvider.php
+
+``bash
+
 ->id('jualan')
             ->path('jualan')
             ->login()
+```
